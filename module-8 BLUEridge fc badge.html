@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Ridge FC — BVB-Style SVG Badge</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f2f2f2;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .site {
+      width: min(92vw, 850px);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+    }
+
+    .badge {
+      width: min(78vw, 400px);
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+    }
+
+    p {
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+    <!-- BREAKDOWN OVERVIEW- 
+     BVB badge.
+      
+// SVG SHAPES IN HTML (WHAT IT IS).
+// 
+// (WHAT IT DOES)Think of the SVG as a coordinate grid, The x value moves an object left and right.
+The y value moves an object up and down.. Using <text> to create text shapes or "shapes" in the form of letters 
+  and you can use basic shape values like circle, triangle, square to make actual shapes as we view them
+
+
+    -->
+
+
+
+<body>
+  <main class="site">
+    <h1>Borussia Dortmund FC</h1>
+
+    <!--
+     BVB badge.
+      xmlns="http://www.w3.org/2000/svg (WHAT IT IS) 
+      (WHAT IT DOES) 
+      the official namespace identifier for SVG."The elements inside this tag use the SVG language/standard 
+      Easy way to remember:
+      xmlns="http://www.w3.org/2000/svg" = tell the browser this drawing is SVG.
+    -->
+    <svg
+      class="badge"
+      viewBox="0 0 400 400"
+      role="img"
+      aria-labelledby="blue-ridge-title blue-ridge-desc"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <title id="blue-ridge FC Badge-title">BVB circular geometric badge</title>
+    
+
+      <!-- Yellow circular badge  (WHAT IT IS) 
+      (WHAT IT DOES)
+       fill is what identiefies our color value  is this case we use the hex code value for yellow and we make 
+       a yellow circle that will then be overlapped by another cirlce to give almost the effect of using a border and border width styling  
+      -->
+      <circle
+        cx="200"
+        cy="200"
+        r="192"
+        fill="#FDE100"
+        stroke="#000000"
+        stroke-width="10"/>
+
+      <!-- Inner black ring  (WHAT IT IS) 
+       
+      
+      
+      (WHAT IT DOES)
+       CX and CY Are the cirle x value to move it left and right and then the cirle Y value is what allows us to move our object up and down 
+       this can be used for many different objects we just have to determine what shape in this case circle-->
+
+      
+      <circle
+        cx="200"
+        cy="200"
+        r="177"
+        fill="none"
+        stroke="#000000"
+        stroke-width="4"/>
+
+      <!-- Large BVB-style lettering  (WHAT IT IS) 
+       (WHAT IT DOES)
+       Using <text> to create shapes ....You can use letters as visual building blocks this is where SVG becomes interesting.
+         using svgs and the x and y tag you can move the letters around:....font-size makes the shapes bigger and that can be used in 
+         tandem with x and y postioning 
+
+         fill is what identiefies our color value 
+       
+       -->
+      <g
+        fill="#000000"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="900"
+        text-anchor="middle">
+
+        <text x="111" y="260" font-size="151">B</text>
+        <text x="200" y="202" font-size="150">V</text>
+        <text x="289" y="260" font-size="151">B</text>
+      </g>
+
+      <!-- 09 -->
+      <text
+        x="200"
+        y="348"
+        fill="#000000"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="72"
+        font-weight="900"
+        text-anchor="middle"
+        letter-spacing="2">09</text>
+    </svg>
+<details><p>The hardest shape to position was the large “V” in the center of the badge because I had to make sure it was centered between the two B letters while keeping the entire logo balanced inside the circular border. I used the SVG x and y coordinates to move the letters until they lined up correctly. The first color combination I tried did not work because I used lighter colors that did not create enough contrast between the badge and the lettering. I changed the design to a strong black-and-yellow combination, which made the letters much easier to see and gave the badge a stronger appearance. Outside of class, I have seen similar SVG-style badges and logos on sports team websites, sports merchandise, and digital graphics. Many team logos use simple geometric shapes, bold lettering, and strong colors because SVG allows them to stay sharp when displayed at different sizes. Creating this badge helped me understand how SVG coordinates, 
+    text, shapes, and color can work together to create a recognizable design.</p></details>
+  </main>
+</body>
+</html>
